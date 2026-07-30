@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CodeVault</title>
+
+    <link rel="stylesheet" href="style.css">
+     <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" rel="stylesheet"/>
+</head>
+<body>
+    <header>
+    
+    <h1 id="mainHeading">CodeVault</h1>
+    <p>Your Personal Code Snippet Manager</p>
+      <button id="themeBtn">
+    🌙 Dark Mode
+</button>
+<button id="exportBtn">
+    📤 Export
+</button>
+
+<button id="importBtn">
+    📥 Import
+</button>
+
+
+<input 
+type="file" 
+id="importFile"
+style="display:none"
+>
+
+</header>
+
+<main>
+    <div class="dashboard">
+
+    <div class="stat-card">
+        <h3>Total Snippets</h3>
+        <p id="totalCount">0</p>
+    </div>
+
+
+    <div class="stat-card">
+        <h3>Favorites ⭐</h3>
+        <p id="favoriteCount">0</p>
+    </div>
+
+
+    <div class="stat-card">
+        <h3>C++</h3>
+        <p id="cppCount">0</p>
+    </div>
+
+
+    <div class="stat-card">
+        <h3>Python</h3>
+        <p id="pythonCount">0</p>
+    </div>
+
+</div>
+   <div class="button-container">
+        <button class="add-btn" id="addSnippetBtn">
+    Add New Snippet
+</button>
+<div id="popup">
+
+    <h2>Add New Snippet</h2>
+
+    <input
+    type="text"
+    id="titleInput"
+    placeholder="Enter Title"
+>
+
+<br><br>
+
+
+<select id="languageInput">
+
+    <option value="">Select Language</option>
+
+    <option value="C++">C++</option>
+
+    <option value="Python">Python</option>
+
+    <option value="Java">Java</option>
+
+    <option value="HTML">HTML</option>
+
+    <option value="CSS">CSS</option>
+
+    <option value="JavaScript">JavaScript</option>
+
+</select>
+
+
+<br><br>
+
+
+<select id="categoryInput">
+
+    <option value="">Select Category</option>
+
+    <option value="DSA">DSA</option>
+
+    <option value="Web Development">Web Development</option>
+
+    <option value="AI/ML">AI/ML</option>
+
+    <option value="Projects">Projects</option>
+
+</select>
+
+
+<br><br>
+
+
+<textarea
+    id="codeInput"
+    placeholder="Write your code here..."
+></textarea>
+
+    <br><br>
+
+    <button id="saveBtn">
+        Save
+    </button>
+
+</div>
+
+</div>
+
+    <div class="search-container">
+
+    <input
+    type="text"
+    class="search-input"
+    id="searchInput"
+    placeholder="🔍 Search snippets..."
+>
+    
+    <div class="filter-container">
+
+    <button class="filter-btn" data-language="All">
+    All
+</button>
+
+<button class="filter-btn" id="favoriteFilter">
+    ⭐ Favorites
+</button>
+
+<button class="filter-btn" data-language="C++">
+    C++
+</button>
+
+<button class="filter-btn" data-language="Python">
+    Python
+</button>
+
+<button class="filter-btn" data-language="Java">
+     Java
+</button>
+
+<button class="filter-btn" data-language="HTML">
+    HTML
+</button>
+
+<button class="filter-btn" data-language="CSS">
+    CSS
+</button>
+<button class="filter-btn" data-language="JavaScript">
+    JavaScript
+</button>
+
+</div>
+
+</div>
+<div id="snippetsContainer">
+
+    <p id="emptyMessage">
+        📂 No snippets yet. Add your first snippet!
+    </p>
+
+
+</div>
+
+
+
+</main>
+
+<footer>
+
+</footer>
+
+
+
+
+     <div id="toast"></div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-c.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-cpp.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-python.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-java.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-css.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-javascript.min.js"></script>
+
+<script src="script.js"></script>
+</body>
+</html>
