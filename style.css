@@ -246,36 +246,53 @@ transition: 0.3s;
 }
 .dark-mode{
 
-    background-color:#111827;
+background:
+radial-gradient(circle at top right,#7C3AED 0%,transparent 35%),
+radial-gradient(circle at bottom left,#2563EB 0%,transparent 35%),
+linear-gradient(135deg,#020617,#000000,#111827);
 
-    color:white;
+background-attachment:fixed;
+
+color:white;
+
+transition:0.4s;
 
 }
 
 
 .dark-mode .snippet-card{
 
-    background-color:#1F2937;
+background:rgba(17,24,39,.9);
 
-    color:white;
+border:1px solid rgba(139,92,246,.35);
+
+box-shadow:0 0 25px rgba(139,92,246,.25);
+
+color:white;
 
 }
 
 
 .dark-mode .filter-btn{
 
-    background-color:#374151;
+background:#312E81;
 
-    color:white;
+border:1px solid #6366F1;
+
+color:white;
 
 }
 
 
 .dark-mode .search-input{
 
-    background-color:#1F2937;
+background:#111827;
 
-    color:white;
+border:1px solid #6366F1;
+
+color:white;
+
+box-shadow:0 0 15px rgba(99,102,241,.2);
 
 }
 .favorite-btn{
@@ -348,9 +365,15 @@ transition: 0.3s;
 }
 
 
-.dark-mode .stat-card p{
+.dark-mode .stat-card{
 
-    color:white;
+background:rgba(17,24,39,.9);
+
+border:1px solid rgba(139,92,246,.35);
+
+box-shadow:0 0 25px rgba(99,102,241,.25);
+
+color:white;
 
 }
 .stat-card:hover{
@@ -620,4 +643,48 @@ font-family:'Fira Code',monospace;
 
 font-size:14px;
 
+}
+.dark-mode #popup{
+    box-shadow:
+        0 0 25px rgba(139,92,246,.3);
+}
+.dark-mode #mainHeading{
+    text-shadow:
+        0 0 10px #8B5CF6,
+        0 0 20px #6366F1,
+        0 0 40px #2563EB;
+}
+
+.dark-mode .stat-card,
+.dark-mode .snippet-card{
+    transform: scale(1.01);
+    box-shadow:
+        0 0 20px rgba(99,102,241,0.25),
+        0 0 45px rgba(139,92,246,0.15);
+}
+
+.dark-mode .search-input{
+    box-shadow:
+        0 0 15px rgba(99,102,241,0.4);
+}
+
+.dark-mode .add-btn{
+    background:linear-gradient(135deg,#8B5CF6,#2563EB);
+    box-shadow:
+        0 0 20px rgba(99,102,241,.5);
+}
+
+.dark-mode .copy-btn,
+.dark-mode .edit-btn,
+.dark-mode .delete-btn,
+.dark-mode .favorite-btn{
+    box-shadow:0 0 15px rgba(99,102,241,.3);
+}
+
+.dark-mode{
+    transition:all .4s ease;
+}
+
+body{
+    transition:all .4s ease;
 }

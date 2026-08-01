@@ -374,27 +374,29 @@ card.style.display="none";
 
 
 
-themeBtn.addEventListener("click",function(){
+themeBtn.addEventListener("click", function () {
 
+    document.body.classList.toggle("dark-mode");
 
-document.body.classList.toggle("dark-mode");
-
-
-localStorage.setItem(
-"theme",
-document.body.classList.contains("dark-mode")
-?
-"dark":"light"
-);
-
+    if (document.body.classList.contains("dark-mode")) {
+        themeBtn.textContent = "☀️ Light Mode";
+        localStorage.setItem("theme", "dark");
+    } else {
+        themeBtn.textContent = "🌙 Dark Mode";
+        localStorage.setItem("theme", "light");
+    }
 
 });
 
 
+if (localStorage.getItem("theme") === "dark") {
 
-if(localStorage.getItem("theme")==="dark"){
+    document.body.classList.add("dark-mode");
+    themeBtn.textContent = "☀️ Light Mode";
 
-document.body.classList.add("dark-mode");
+} else {
+
+    themeBtn.textContent = "🌙 Dark Mode";
 
 }
 
